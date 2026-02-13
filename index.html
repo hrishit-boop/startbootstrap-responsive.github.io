@@ -15,6 +15,46 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+
+        <!-- Responsive helpers (based on basic techniques from W3Schools Responsive Web Design) -->
+        <style>
+            /* Prevent accidental horizontal scrolling on small screens */
+            html, body { max-width: 100%; overflow-x: hidden; }
+
+            /* Responsive images (W3Schools: use max-width:100% and height:auto) */
+            img { max-width: 100%; height: auto; }
+
+            /* Make the masthead avatar scale down nicely on smaller devices */
+            .masthead-avatar {
+                width: 100%;
+                max-width: 280px;
+                height: auto;
+            }
+
+            /* Ensure portfolio thumbnails never overflow their columns */
+            .portfolio-item img { width: 100%; height: auto; display: block; }
+
+            /* Improve modal spacing on very small screens */
+            @media (max-width: 576px) {
+                .portfolio-modal .modal-dialog { margin: 0.75rem; }
+                .masthead { padding-top: 6rem; padding-bottom: 3rem; }
+                .masthead-heading { font-size: 1.75rem; }
+                .masthead-subheading { font-size: 1rem; }
+                .page-section { padding: 3rem 0; }
+                .navbar-brand { font-size: 1rem; }
+            }
+
+            /* Tablet tweaks */
+            @media (max-width: 768px) {
+                .masthead-avatar { max-width: 240px; }
+                .page-section-heading { font-size: 1.75rem; }
+            }
+
+            /* Desktop / large screens keep original feel */
+            @media (min-width: 992px) {
+                .masthead-avatar { max-width: 320px; }
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
